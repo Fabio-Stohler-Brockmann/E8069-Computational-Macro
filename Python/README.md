@@ -108,3 +108,16 @@ after the session.
 **New package.** Week 5 adds `quantecon` to the environment. Either update the
 environment with `conda env update -f environment.yml` from this folder, or
 let the first cell of the notebook install it into the running kernel.
+
+## Week 7: Monte Carlo against Young's method
+
+**In class, Thursday 22.10., 10:00 to 12:00.** `Week_7/aggregation_and_young.ipynb`
+has three parts. Part 1 solves the CRRA household of the session 6 slides with
+the endogenous grid method of week 5 (given). Part 2 aggregates by Monte Carlo
+simulation, one `np.interp` per income state and period, and measures the
+sampling error of the mean across seeds. Part 3 is Young's method: the lottery,
+the row of the policy chain for one cell written out (where its mass goes), the
+chain as a `scipy.sparse` matrix from triplets, `Q.T @ lam` to the stationary distribution, and the checks of the
+slides. Gaps are marked `___`, the comment line above each one says what goes
+in, and every part ends with a number from the slides to compare.
+`Week_7/aggregation_and_young_solution.ipynb` is posted after the session.

@@ -173,3 +173,17 @@ to each one says what goes in, and every part ends with a number to compare.
 **New package.** Week 5 adds `QuantEcon` to the environment. Pull before class
 and run the first cell of the notebook, which installs it (a few minutes the
 first time), or follow "Updating the environment after a pull" above.
+
+## Week 7: Monte Carlo against Young's method
+
+**In class, Thursday 22.10., 10:00 to 12:00.** `Week_7/aggregation_and_young.ipynb`
+has three parts. Part 1 solves the CRRA household of the session 6 slides with
+the endogenous grid method of week 5 (given). Part 2 aggregates by Monte Carlo
+simulation, one `interp1` per income state and period, and measures the
+sampling error of the mean across seeds. Part 3 is Young's method: the lottery,
+the row of the policy chain for one cell written out (where its mass goes), the
+chain with `sparse(rows, cols, vals, n, n)` from `SparseArrays`,
+`Q' * lam` to the stationary distribution, and the checks of the
+slides. Gaps are marked `___`, the comment line above each one says what goes
+in, and every part ends with a number from the slides to compare.
+`Week_7/aggregation_and_young_solution.ipynb` is posted after the session.
