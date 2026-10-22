@@ -138,6 +138,7 @@ E8069-Computational-Macro/
 │   ├── Week_2/          vfi_on_grid.ipynb (in class, with gaps), vfi_on_grid_solution.ipynb
 │   ├── Week_3/          vfi_off_grid.ipynb (in class, with gaps), vfi_off_grid_solution.ipynb, ai_prompts.md
 │   ├── Week_5/          markov_chains_and_egm.ipynb (in class, with gaps), ps2_template.ipynb (problem set 2)
+│   ├── Week_7/          aggregation_and_young.ipynb (in class, with gaps)
 │   └── PS_1/            ps1_solution.ipynb: example solution to the coding part of problem set 1
 ├── Python/              Python track: environment (environment.yml) and one folder per week
 │   ├── README.md
@@ -145,6 +146,7 @@ E8069-Computational-Macro/
 │   ├── Week_2/          vfi_on_grid.ipynb (in class, with gaps), vfi_on_grid_solution.ipynb
 │   ├── Week_3/          vfi_off_grid.ipynb (in class, with gaps), vfi_off_grid_solution.ipynb, ai_prompts.md
 │   ├── Week_5/          markov_chains_and_egm.ipynb (in class, with gaps), ps2_template.ipynb (problem set 2)
+│   ├── Week_7/          aggregation_and_young.ipynb (in class, with gaps)
 │   └── PS_1/            ps1_solution.ipynb: example solution to the coding part of problem set 1
 └── projects/            information on the final project (later in the semester)
 ```
@@ -167,9 +169,12 @@ In session 3 we fill in the notebook `Week_3/vfi_off_grid.ipynb` (Julia or Pytho
 
 Two sessions this week. Wednesday is the lecture (income on a grid, the CARA benchmark, time iteration, root finding, Howard, the endogenous grid method). On **Thursday, 08.10.2026, 10:15 to 11:45** we fill in `Week_5/markov_chains_and_egm.ipynb` (Julia or Python track): Tauchen and Rouwenhorst with the `QuantEcon` package, printing and comparing the transition matrices, the stationary distribution, a simulation, and then time iteration and the endogenous grid method on the CARA household of the slides, both measured against the exact policy. Part 4 (persistent income) is for home. **Both tracks add a package this week, `quantecon` (Python) and `QuantEcon` (Julia). Pull before class and run the first cell of the notebook, which installs it.** The solution notebook is posted after the session. `Week_5/ps2_template.ipynb` is the template of problem set 2.
 
+## Week 7
+
+On **Thursday, 22.10.2026, 10:00 to 12:00** we fill in `Week_7/aggregation_and_young.ipynb` (Julia or Python track): the code behind the session 6 slides. Part 1 solves the CRRA household of the slides with the endogenous grid method of week 5 (given). Part 2 aggregates by Monte Carlo simulation and measures the sampling error. Part 3 is Young's method: the lottery, where the mass of one cell goes, the policy chain as a sparse matrix, the stationary distribution, and the checks of the slides. Four gaps, every part ends with a number from the slides to compare with. Nothing new to install. The solution notebook is posted after the session.
 ## Problem sets and the final project
 
-Problem sets are solved in teams of two and submitted through GitHub. There are three: PS 1 was due on Sunday, 27.09.2026, PS 2 is due on Wednesday, 21.10.2026, at 23:59, and PS 3 on Sunday, 22.11.2026, at 23:59. The midterm takes place in class on 28.10.2026, a mock exam is distributed on 21.10.2026. The final project (repository and write-up) is due on 13.12.2026 at 23:59, after the project presentations on 09.12. See the syllabus for details on grading and the AI policy.
+Problem sets are solved in teams of two and submitted through GitHub. There are three: PS 1 was due on Sunday, 27.09.2026, PS 2 was due on Tuesday, 20.10.2026, at 11:59, and PS 3 is due on Sunday, 22.11.2026, at 23:59. The midterm takes place in class on 28.10.2026, a mock exam is distributed on 21.10.2026. The final project (repository and write-up) is due on 13.12.2026 at 23:59, after the project presentations on 10.12. See the syllabus for details on grading and the AI policy.
 
 The example solution to the coding part of problem set 1 is in `PS_1/ps1_solution.ipynb` (Julia or Python track).
 
