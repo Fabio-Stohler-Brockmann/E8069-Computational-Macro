@@ -171,7 +171,7 @@ E8069-Computational-Macro/
 │   ├── Week_3/          vfi_off_grid.ipynb (in class, with gaps), vfi_off_grid_solution.ipynb, ai_prompts.md
 │   ├── Week_5/          markov_chains_and_egm.ipynb (in class, with gaps), ps2_template.ipynb (problem set 2)
 │   ├── Week_7/          aggregation_and_young.ipynb (in class, with gaps)
-│   ├── Week_8/          profiling_and_equilibrium.ipynb (in class, with gaps)
+│   ├── Week_8/          profiling_and_equilibrium.ipynb (in class, no gaps)
 │   └── PS_1/            ps1_solution.ipynb: example solution to the coding part of problem set 1
 ├── Python/              Python track: environment (environment.yml) and one folder per week
 │   ├── README.md
@@ -180,7 +180,7 @@ E8069-Computational-Macro/
 │   ├── Week_3/          vfi_off_grid.ipynb (in class, with gaps), vfi_off_grid_solution.ipynb, ai_prompts.md
 │   ├── Week_5/          markov_chains_and_egm.ipynb (in class, with gaps), ps2_template.ipynb (problem set 2)
 │   ├── Week_7/          aggregation_and_young.ipynb (in class, with gaps)
-│   ├── Week_8/          profiling_and_equilibrium.ipynb (in class, with gaps)
+│   ├── Week_8/          profiling_and_equilibrium.ipynb (in class, no gaps)
 │   └── PS_1/            ps1_solution.ipynb: example solution to the coding part of problem set 1
 └── projects/            information on the final project (later in the semester)
 ```
@@ -209,7 +209,7 @@ On **Thursday, 22.10.2026, 10:00 to 12:00** we fill in `Week_7/aggregation_and_y
 
 ## Week 8
 
-In the coding session after the midterm we fill in `Week_8/profiling_and_equilibrium.ipynb` (Julia or Python track). Part 1 is last week's code, given. Part 2 measures Monte Carlo against Young's method and profiles one evaluation of asset supply: timing the pieces, and the profiler of the standard library (session 7). Part 3 wraps the distribution into one equilibrium solver for Huggett and Aiyagari. Two gaps. Nothing new to install.
+In the coding session after the midterm (Thursday, 29.10.2026) we work through `Week_8/profiling_and_equilibrium.ipynb` (Julia or Python track), after the session 8 slides. Part 1 is last week's code, given. Part 2 measures Monte Carlo against Young's method and profiles one evaluation of asset supply: timing the pieces, and the profiler of the standard library (session 8). Part 3 wraps the distribution into one equilibrium solver for Huggett and Aiyagari. Part 4 is an experiment: change the grid size and the tolerances of the solver and read off what each costs in time and in digits. No gaps this week, the code is complete; the work is to run it, read the output, and change the settings. Nothing new to install.
 
 ## Problem sets and the final project
 
