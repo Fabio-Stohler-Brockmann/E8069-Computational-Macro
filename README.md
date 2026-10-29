@@ -4,6 +4,38 @@ Material for the PhD course Computational Macro at the University of Mannheim. T
 
 All coding content of the course (code templates, problem sets, coding snippets) is distributed through this repository. Your own solutions go into a separate repository that we set up together in class.
 
+## Formatting and pre-commit hooks (from week 7)
+
+From session 7 on, the code you push is formatted: `black` for Python, `JuliaFormatter` for Julia. A pre-commit hook runs the formatter before every commit, so that you never have to think about it. Set it up once per repository, in your own solutions repository:
+
+1. Put this file into the root of the repository, as `.pre-commit-config.yaml`:
+
+   ```yaml
+   repos:
+     - repo: https://github.com/psf/black
+       rev: 25.1.0
+       hooks:
+         - id: black-jupyter
+     - repo: https://github.com/domluna/JuliaFormatter.jl
+       rev: v2.1.2
+       hooks:
+         - id: julia-formatter
+   ```
+
+   Keep only the block of your language if you like. The settings go next to it: `pyproject.toml` with `[tool.black]` and `line-length = 110` for Python, `.JuliaFormatter.toml` with `style = "blue"` and `margin = 110` for Julia.
+
+2. In a terminal in the repository folder (the Python track has `pip` in the `compmacro` environment, the Julia track installs `pre-commit` the same way, it is a Python tool):
+
+   ```
+   pip install pre-commit
+   pre-commit install
+   pre-commit run --all-files
+   ```
+
+3. From now on `git commit` runs the hooks first. If a hook changed a file, the commit stops, the file is formatted: `git add` it and commit again. Commit from GitHub Desktop works the same way, the hooks run there too.
+
+Do not add the `nbstripout` hook to this file for the problem sets: it strips the outputs from notebooks before every commit, and your outputs are what I read.
+
 ## Before the first session
 
 Please complete the steps below **before 10.09.2026**. Setting up software is sometimes tricky across operating systems, and we lose a lot of class time if we do it live. If you get stuck, send me an email with the error message and I will help you sort it out before the course starts.
@@ -139,6 +171,7 @@ E8069-Computational-Macro/
 │   ├── Week_3/          vfi_off_grid.ipynb (in class, with gaps), vfi_off_grid_solution.ipynb, ai_prompts.md
 │   ├── Week_5/          markov_chains_and_egm.ipynb (in class, with gaps), ps2_template.ipynb (problem set 2)
 │   ├── Week_7/          aggregation_and_young.ipynb (in class, with gaps)
+│   ├── Week_8/          profiling_and_equilibrium.ipynb (in class, with gaps)
 │   └── PS_1/            ps1_solution.ipynb: example solution to the coding part of problem set 1
 ├── Python/              Python track: environment (environment.yml) and one folder per week
 │   ├── README.md
@@ -147,6 +180,7 @@ E8069-Computational-Macro/
 │   ├── Week_3/          vfi_off_grid.ipynb (in class, with gaps), vfi_off_grid_solution.ipynb, ai_prompts.md
 │   ├── Week_5/          markov_chains_and_egm.ipynb (in class, with gaps), ps2_template.ipynb (problem set 2)
 │   ├── Week_7/          aggregation_and_young.ipynb (in class, with gaps)
+│   ├── Week_8/          profiling_and_equilibrium.ipynb (in class, with gaps)
 │   └── PS_1/            ps1_solution.ipynb: example solution to the coding part of problem set 1
 └── projects/            information on the final project (later in the semester)
 ```
@@ -172,6 +206,11 @@ Two sessions this week. Wednesday is the lecture (income on a grid, the CARA ben
 ## Week 7
 
 On **Thursday, 22.10.2026, 10:00 to 12:00** we fill in `Week_7/aggregation_and_young.ipynb` (Julia or Python track): the code behind the session 6 slides. Part 1 solves the CRRA household of the slides with the endogenous grid method of week 5 (given). Part 2 aggregates by Monte Carlo simulation and measures the sampling error. Part 3 is Young's method: the lottery, where the mass of one cell goes, the policy chain as a sparse matrix, the stationary distribution, and the checks of the slides. Four gaps, every part ends with a number from the slides to compare with. Nothing new to install. The solution notebook is posted after the session.
+
+## Week 8
+
+In the coding session after the midterm we fill in `Week_8/profiling_and_equilibrium.ipynb` (Julia or Python track). Part 1 is last week's code, given. Part 2 measures Monte Carlo against Young's method and profiles one evaluation of asset supply: timing the pieces, and the profiler of the standard library (session 7). Part 3 wraps the distribution into one equilibrium solver for Huggett and Aiyagari. Two gaps. Nothing new to install.
+
 ## Problem sets and the final project
 
 Problem sets are solved in teams of two and submitted through GitHub. There are three: PS 1 was due on Sunday, 27.09.2026, PS 2 was due on Tuesday, 20.10.2026, at 11:59, and PS 3 is due on Sunday, 22.11.2026, at 23:59. The midterm takes place in class on 28.10.2026, a mock exam is distributed on 21.10.2026. The final project (repository and write-up) is due on 13.12.2026 at 23:59, after the project presentations on 10.12. See the syllabus for details on grading and the AI policy.

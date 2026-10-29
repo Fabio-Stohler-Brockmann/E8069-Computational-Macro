@@ -187,3 +187,17 @@ chain with `sparse(rows, cols, vals, n, n)` from `SparseArrays`,
 slides. Gaps are marked `___`, the comment line above each one says what goes
 in, and every part ends with a number from the slides to compare.
 `Week_7/aggregation_and_young_solution.ipynb` is posted after the session.
+
+## Week 8: profiling, and one equilibrium wrapper
+
+**In class, the coding session after the midterm.**
+`Week_8/profiling_and_equilibrium.ipynb` has three parts. Part 1 is last week's
+code, given. Part 2 measures: Monte Carlo against Young in one table, the three
+pieces of `A(r)` with `time()`, the sampling profiler `@profile` with `Profile.print`, and what the
+profile says. Part 3 wraps the distribution into one `stationary_equilibrium`
+that solves Huggett and Aiyagari from an `Economy` (borrowing limit, wage
+function, demand function), with warm starts along the bisection. Two gaps.
+`Week_8/profiling_and_equilibrium_solution.ipynb` is posted after the session.
+
+**Packages.** Nothing new in either week: everything is in the environment
+since week 5 or ships with the language. Run the first cell once after pulling.
