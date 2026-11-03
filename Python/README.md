@@ -138,3 +138,24 @@ and read the output.
 
 **Packages.** Nothing new in either week: everything is in the environment
 since week 5 or ships with the language. Run the first cell once after pulling.
+
+## Week 9: perturbation, Blanchard and Kahn, and Klein
+
+**In class, Thursday, 05.11.2026, 10:15 to 11:45.**
+`Week_9/perturbation_and_klein.ipynb` has five parts. Part 1 writes the
+stochastic growth model as one function `F(x_next, x, par)` of the variables in
+logs, states first, and finds the steady state. Part 2 computes the matrices
+`A` and `B` of the linear system by central differences (`jacobian`,
+`linearize`). Part 3 is `solve_bk`: `eig` of `A^{-1} B`, the count of stable
+eigenvalues, and `H` and `G` from the left eigenvectors. Part 4 is
+`solve_klein`: `scipy.linalg.ordqz` with the stable eigenvalues first, `H` and
+`G` from the blocks of `Z`, `S`, and `T`, and the same model with output and
+investment as named variables, where `A` is singular. Part 5 uses the solution:
+`impulse_response`, `simulate` with a seeded generator against the exact path
+of the benchmark, and the transfer to `gamma = 2`, `delta = 0.1` against a
+global solution by the endogenous grid method (given) and the Euler equation
+error of problem set 1. Ten gaps, marked `___`. The last cell is an experiment
+with the persistence of TFP.
+
+**Packages.** Nothing new: `scipy.linalg` ships with `scipy`, in the
+environment since week 3. Run the first cell once after pulling.

@@ -172,6 +172,7 @@ E8069-Computational-Macro/
 │   ├── Week_5/          markov_chains_and_egm.ipynb (in class, with gaps), ps2_template.ipynb (problem set 2)
 │   ├── Week_7/          aggregation_and_young.ipynb (in class, with gaps)
 │   ├── Week_8/          profiling_and_equilibrium.ipynb (in class, no gaps)
+│   ├── Week_9/          perturbation_and_klein.ipynb (in class, with gaps)
 │   └── PS_1/            ps1_solution.ipynb: example solution to the coding part of problem set 1
 ├── Python/              Python track: environment (environment.yml) and one folder per week
 │   ├── README.md
@@ -181,6 +182,7 @@ E8069-Computational-Macro/
 │   ├── Week_5/          markov_chains_and_egm.ipynb (in class, with gaps), ps2_template.ipynb (problem set 2)
 │   ├── Week_7/          aggregation_and_young.ipynb (in class, with gaps)
 │   ├── Week_8/          profiling_and_equilibrium.ipynb (in class, no gaps)
+│   ├── Week_9/          perturbation_and_klein.ipynb (in class, with gaps)
 │   └── PS_1/            ps1_solution.ipynb: example solution to the coding part of problem set 1
 └── projects/            information on the final project (later in the semester)
 ```
@@ -210,6 +212,10 @@ On **Thursday, 22.10.2026, 10:00 to 12:00** we fill in `Week_7/aggregation_and_y
 ## Week 8
 
 In the coding session after the midterm (Thursday, 29.10.2026) we work through `Week_8/profiling_and_equilibrium.ipynb` (Julia or Python track), after the session 8 slides. Part 1 is last week's code, given. Part 2 measures Monte Carlo against Young's method and profiles one evaluation of asset supply: timing the pieces, and the profiler of the standard library (session 8). Part 3 wraps the distribution into one equilibrium solver for Huggett and Aiyagari. Part 4 is an experiment: change the grid size and the tolerances of the solver and read off what each costs in time and in digits. No gaps this week, the code is complete; the work is to run it, read the output, and change the settings. Nothing new to install.
+
+## Week 9
+
+On **Thursday, 05.11.2026, 10:15 to 11:45** we fill in `Week_9/perturbation_and_klein.ipynb` (Julia or Python track): the code behind the session 9 slides. Part 1 writes the stochastic growth model as one system of equations `F(x', x) = 0` and finds its steady state. Part 2 linearizes it by finite differences. Part 3 solves the linear system with the eigen-decomposition of Blanchard and Kahn, part 4 with the generalized Schur decomposition of Klein, in a `solve_klein` of ten lines, and on a version of the model with static equations that only Klein can handle. Part 5 computes impulse responses and a simulation, checks both against the exact path of the Brock and Mirman benchmark, and then changes two parameters to the economy of problem set 1 and compares the linear policy with a global solution. Ten gaps, every part ends with a number from the slides to compare with. Nothing new to install. The solution notebook is posted after the session.
 
 ## Problem sets and the final project
 
