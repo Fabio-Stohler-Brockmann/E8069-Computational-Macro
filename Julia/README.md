@@ -225,3 +225,23 @@ with the persistence of TFP.
 
 **Packages.** Nothing new: `LinearAlgebra`, `Random`, and `Statistics` ship
 with Julia, `Plots` is in the environment. Run the first cell once after pulling.
+
+## Week 10: Reiter's method
+
+**In class, Thursday, 12.11.2026, 10:15 to 11:45.**
+`Week_10/reiter_method.ipynb` has five parts. Part 1 calibrates the aggregate
+economy (a PRANK, five equations) and solves it with `jacobian`, `linearize`,
+and `solve_klein` of week 9, the last now with `schur(A, B)` in real
+arithmetic. Part 2 solves the household on the grid: `egm_step` on log
+marginal values, `lottery` and `transition_matrix` of week 8, `forward` with
+newborns, bisection on `r`, and the comparison with the analytical policy and
+the analytical CDF of cash on hand (`cdf(Normal(), z)` from `Distributions`).
+Part 3 is Reiter's method: `unpack`, `pack`, and `F_reiter` with the histogram
+(without its last bin), capital, TFP, and the marginal values in one vector of
+801 entries, then `linearize` and `solve_klein`. Part 4 compares the impulse
+responses with the aggregate economy, part 5 with the same economy without income risk. Eight
+gaps, marked `___`. Part 3 takes a few seconds per cell.
+
+**Packages.** One new entry in `Project.toml`: `Distributions`, which is
+already installed as a part of `QuantEcon`. `LinearAlgebra`, `SparseArrays`,
+and `Statistics` ship with Julia. Run the first cell once after pulling.

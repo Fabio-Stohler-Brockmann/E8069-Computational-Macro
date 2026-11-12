@@ -173,6 +173,7 @@ E8069-Computational-Macro/
 │   ├── Week_7/          aggregation_and_young.ipynb (in class, with gaps)
 │   ├── Week_8/          profiling_and_equilibrium.ipynb (in class, no gaps)
 │   ├── Week_9/          perturbation_and_klein.ipynb (in class, with gaps)
+│   ├── Week_10/         reiter_method.ipynb (in class, with gaps)
 │   └── PS_1/            ps1_solution.ipynb: example solution to the coding part of problem set 1
 ├── Python/              Python track: environment (environment.yml) and one folder per week
 │   ├── README.md
@@ -183,6 +184,7 @@ E8069-Computational-Macro/
 │   ├── Week_7/          aggregation_and_young.ipynb (in class, with gaps)
 │   ├── Week_8/          profiling_and_equilibrium.ipynb (in class, no gaps)
 │   ├── Week_9/          perturbation_and_klein.ipynb (in class, with gaps)
+│   ├── Week_10/         reiter_method.ipynb (in class, with gaps)
 │   └── PS_1/            ps1_solution.ipynb: example solution to the coding part of problem set 1
 └── projects/            information on the final project (later in the semester)
 ```
@@ -217,9 +219,13 @@ In the coding session after the midterm (Thursday, 29.10.2026) we work through `
 
 On **Thursday, 05.11.2026, 10:15 to 11:45** we fill in `Week_9/perturbation_and_klein.ipynb` (Julia or Python track): the code behind the session 9 slides. Part 1 writes the stochastic growth model as one system of equations `F(x', x) = 0` and finds its steady state. Part 2 linearizes it by finite differences. Part 3 solves the linear system with the eigen-decomposition of Blanchard and Kahn, part 4 with the generalized Schur decomposition of Klein, in a `solve_klein` of ten lines, and on a version of the model with static equations that only Klein can handle. Part 5 computes impulse responses and a simulation, checks both against the exact path of the Brock and Mirman benchmark, and then changes two parameters to the economy of problem set 1 and compares the linear policy with a global solution. Ten gaps, every part ends with a number from the slides to compare with. Nothing new to install. The solution notebook is posted after the session.
 
+## Week 10
+
+On **Thursday, 12.11.2026, 10:15 to 11:45** we fill in `Week_10/reiter_method.ipynb` (Julia or Python track): the code behind the session 10 slides, Reiter's method by hand. The economy has households with CARA utility, persistent income risk, and a constant probability of death, and its aggregate version of five equations is exact. Part 1 solves that aggregate version with the code of week 9. Part 2 solves the steady state on the grid (the EGM on marginal values, Young's method with newborns, bisection on the interest rate) and compares the policy and the distribution with the analytical ones. Part 3 builds Reiter's system with the histogram and the marginal values as variables, 801 of them, linearizes it, and solves it with Klein. Part 4 compares the impulse responses with the aggregate version, part 5 with the same economy without income risk. Eight gaps, every part ends with a number from the slides to compare with. Nothing new to install. The solution notebook is posted after the session.
+
 ## Problem sets and the final project
 
-Problem sets are solved in teams of two and submitted through GitHub. There are three: PS 1 was due on Sunday, 27.09.2026, PS 2 was due on Tuesday, 20.10.2026, at 11:59, and PS 3 is due on Sunday, 22.11.2026, at 23:59. The midterm takes place in class on 28.10.2026, a mock exam is distributed on 21.10.2026. The final project (repository and write-up) is due on 13.12.2026 at 23:59, after the project presentations on 10.12. See the syllabus for details on grading and the AI policy.
+Problem sets are solved in teams of two and submitted through GitHub. There are three: PS 1 was due on Sunday, 27.09.2026, PS 2 was due on Tuesday, 20.10.2026, at 11:59, and PS 3 is due on Sunday, 22.11.2026, at 23:59. The midterm takes place in class on 28.10.2026, a mock exam is distributed on 21.10.2026. The final project (repository and write-up) is due on 13.12.2026 at 23:59, after the project presentations on Wednesday, 09.12. See the syllabus for details on grading and the AI policy.
 
 The example solution to the coding part of problem set 1 is in `PS_1/ps1_solution.ipynb` (Julia or Python track).
 
